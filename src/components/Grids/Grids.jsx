@@ -1,5 +1,5 @@
 import React from "react";
-import { VideoCard, VideosGroupCard } from "../Cards/Cards.jsx";
+import { VideoCard, VideosGroupCard } from "../Cards";
 import "./grids.css";
 
 export const VideoGrid = ({ videoList }) => {

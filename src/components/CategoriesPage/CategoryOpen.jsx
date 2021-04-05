@@ -10,7 +10,7 @@ function getRequiredCategory(categories, reqCategoryId) {
 export const CategoryOpen = ({ match }) => {
   const categoryId = match.params.id;
   const videoList = useVideoContext();
-  const categories = useCategoriesContext();
+  const { state: categories } = useCategoriesContext();
   const reqCategory = getRequiredCategory(categories, categoryId);
   const categoryVideoIds = reqCategory.videos;
   const categoryVideos = [];

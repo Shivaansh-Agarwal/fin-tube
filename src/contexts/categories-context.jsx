@@ -3,6 +3,17 @@ import Axios from "axios";
 
 export const CategoriesContext = createContext();
 
+function getCategoriesList(videos, categories) {
+  return categories.map((category) => {
+    return {
+      ...category,
+      videos: videos
+        .filter(({ categoryId }) => categoryId === category.id)
+        .map((video) => video.id),
+    };
+  });
+}
+
 export const CategoriesProvider = ({ children }) => {
   function reducer(state, action) {
     switch (action.type) {
@@ -16,15 +27,20 @@ export const CategoriesProvider = ({ children }) => {
   useEffect(() => {
     (async function getCategories() {
       try {
-        const { data } = await Axios.get("/api/categories");
-        dispatch({ type: "SET_DATA", payload: data.categories });
+        const { data: categoriesData } = await Axios.get("/api/categories");
+        const { data: videosData } = await Axios.get("/api/videos");
+        const categoriesList = getCategoriesList(
+          videosData.videoList,
+          categoriesData.categories
+        );
+        dispatch({ type: "SET_DATA", payload: categoriesList });
       } catch (error) {
         throw new Error("Error while fetching categories data:", error);
       }
     })();
   }, []);
   return (
-    <CategoriesContext.Provider value={state}>
+    <CategoriesContext.Provider value={{ state }}>
       {children}
     </CategoriesContext.Provider>
   );

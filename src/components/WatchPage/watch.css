@@ -1,0 +1,19 @@
+.watch {
+  max-width: 100%;
+  margin: 3rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe__wrapper {
+  width: 60%;
+}
+
+.watch__buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}

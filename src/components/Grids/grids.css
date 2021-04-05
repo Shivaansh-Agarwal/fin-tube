@@ -1,0 +1,32 @@
+/*
+    CSS-Grid for Cards - GEM of an article...
+    https://css-tricks.com/responsive-grid-magazine-layout-in-just-20-lines-of-css/
+    https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe
+*/
+
+.grid__items {
+  max-width: 1880px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  /* grid-template-columns: repeat(auto-fit, repeat(2, 1fr)); */
+}
+
+/* Screen larger than 600px? 2 columns */
+@media (min-width: 600px) {
+  .grid__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .grid__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Screen larger than 1160px? 4 columns */
+@media (min-width: 1160px) {
+  .grid__items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,102 @@
+:root {
+  --videocard-width: 28.125rem;
+  --thumbnail-height: 15.8125rem;
+  --videocard-details-height: 5rem;
+}
+.videocard {
+  max-width: var(--videocard-width);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.vediocard__thumbnail {
+  width: 100%;
+}
+.vediocard__thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.videocard__details {
+  position: relative;
+  height: var(--videocard-details-height);
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.videocard__details__left {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videocard--creator-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+.videocard--creator-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.videoCard__details__center {
+  margin-left: 0.2rem;
+  max-width: 75%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+.videocard--videoname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+.videocard--creatorname {
+  font-size: 0.75rem;
+}
+.vedioCard__details__right {
+  position: absolute;
+  right: 0;
+}
+
+/*--- VideosGroupCard ---*/
+.playlist__card {
+  border: 1px solid black;
+  max-width: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.playlist__card__thumbnail {
+  width: 100%;
+}
+.playlist__card__thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.playlist__card__details {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.playlist__card--name {
+}
+.playlist__card--videoCount {
+}

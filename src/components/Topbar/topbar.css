@@ -1,0 +1,97 @@
+:root {
+  --topbar-height: 3rem;
+  --topbar-bgcolor: rgba(33, 33, 33, 1);
+  --topbar-logo-color: green;
+  --topbar-logo-fontsize: 1.4rem;
+  --topbar-appname-color: rgba(255, 255, 255, 1);
+  --topbar-appname-fontsize: 1.4rem;
+  --icon-height: 1.5rem;
+  --icon-width: 1.5rem;
+  --icon-padding: 0.75rem;
+  --icon-color: rgba(255, 255, 255, 1);
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--topbar-bgcolor);
+  height: var(--topbar-height);
+  color: var(--topbar-bgcolor);
+  transition: top 0.3s;
+}
+.topbar__main,
+.topbar__search {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar__main__left {
+  height: 100%;
+  width: 7rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.topbar__main__right {
+  height: 100%;
+  width: 6rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar--logo {
+  font-size: var(--topbar-logo-fontsize);
+  color: var(--topbar-logo-color);
+}
+.topbar--appname {
+  font-family: "Roboto", sans-serif;
+  color: var(--topbar-appname-color);
+  font-size: var(--topbar-appname-fontsize);
+  font-weight: 500;
+}
+.topbar--icon {
+  padding: var(--icon-padding);
+  width: var(--icon-width);
+  height: var(--icon-height);
+  color: var(--icon-color);
+  cursor: pointer;
+}
+.topbar--searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.topbar--searchBox input {
+  width: 100%;
+  height: 50%;
+  padding-left: 0.1rem;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid gray;
+}
+.topbar--searchBox input:focus {
+  outline: none;
+  caret-color: gray;
+  border-bottom-color: blue;
+}
+.topbar--avatar {
+  padding: 0.65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100rem;
+}
+.topbar--avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100rem;
+}

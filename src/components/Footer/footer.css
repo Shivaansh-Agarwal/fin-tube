@@ -1,0 +1,40 @@
+:root {
+  --footer-height: 3rem;
+  --footer-bgcolor: rgba(33, 33, 33, 1);
+  --footer-link: white;
+  --footer-icon-color: white;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--footer-bgcolor);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer--section {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid gray;
+}
+.footer--link {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
+  color: var(--footer-link);
+  text-decoration: none;
+}
+.footer--icon {
+  color: var(--footer-icon-color);
+  margin-right: 0.25rem;
+}

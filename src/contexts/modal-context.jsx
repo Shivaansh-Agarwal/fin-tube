@@ -20,6 +20,8 @@ export const ModalProvider = ({ children }) => {
       case "DELETE_PLAYLIST_MODAL_VISIBILITY":
         return {
           ...state,
+          ADD_PLAYLIST_MODAL_VISIBILITY: false,
+          CREATE_PLAYLIST_MODAL_VISIBILITY: false,
           DELETE_PLAYLIST_MODAL_VISIBILITY: action.payload,
         };
       default:

@@ -80,6 +80,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+.playlist__card a {
   text-decoration: none;
 }
 .playlist__card__thumbnail {

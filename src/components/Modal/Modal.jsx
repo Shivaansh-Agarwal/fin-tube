@@ -207,7 +207,7 @@ async function deletePlaylist(
   try {
     const { data, status } = await Axios.delete(`/api/playlists/${playlistId}`);
     if (status === 200) {
-      playlistDispatch({ type: "UPDATE", payload: playlistId });
+      playlistDispatch({ type: "DELETE", payload: playlistId });
     }
   } catch (e) {
     console.error("Error in Deleting Playlist");

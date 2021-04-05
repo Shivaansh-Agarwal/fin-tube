@@ -44,22 +44,27 @@ export const VideosGroupCard = ({ id, name, videos, type }) => {
   const endpoint =
     type === "playlists" ? `/playlists/${id}` : `/categories/${id}`;
   return (
-    <Link className="playlist__card" to={endpoint}>
-      <div className="playlist__card__thumbnail">
-        <img src={`https://picsum.photos/200/160/`} alt="thumbnail" />
-      </div>
-      <div className="playlist__card__details">
-        <div className="playlist__card--name">{name}</div>
-        <div className="playlist__card--videoCount">
-          Number of Videos: {videos ? videos.length : 0}
+    <div className="playlist__card">
+      <Link to={endpoint}>
+        <div className="playlist__card__thumbnail">
+          <img src={`https://picsum.photos/200/160/`} alt="thumbnail" />
         </div>
+        <div className="playlist__card__details">
+          <div className="playlist__card--name">{name}</div>
+          <div className="playlist__card--videoCount">
+            Number of Videos: {videos ? videos.length : 0}
+          </div>
+        </div>
+      </Link>
+      <div className="playlist__card__buttons">
         {type === "playlists" && (
           <button
-            onClick={() => {
+            onClick={(e) => {
               modalDispatch({
                 type: "DELETE_PLAYLIST_MODAL_VISIBILITY",
                 payload: true,
               });
+              e.stopPropagation();
             }}
           >
             Delete Playlist
@@ -67,6 +72,6 @@ export const VideosGroupCard = ({ id, name, videos, type }) => {
         )}
       </div>
       <ModalDeletePlaylist playlistId={id} />
-    </Link>
+    </div>
   );
 };

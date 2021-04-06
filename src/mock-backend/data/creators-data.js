@@ -42,6 +42,12 @@ const creatorData = {
       imgSrc:
         "https://yt3.ggpht.com/ytc/AAUvwni0zYJJ7E-m-2tskhvqp9bnUjIP0dnU1dcn9c8lNQ=s88-c-k-c0x00ffffff-no-rj",
     },
+    {
+      id: "UCVOTBwF0vnSxMRIbfSE_K_g",
+      name: "Labour Law Advisor",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwniKLv8OUIav1NVgVBwJRec7HY55CWhONnFtwHSJDg=s88-c-k-c0x00ffffff-no-rj",
+    },
   ],
 };
 export default creatorData;

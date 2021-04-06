@@ -35,11 +35,13 @@ export const CreatePlaylist = ({ playlists, updatePlaylist, videoId }) => {
 
   return (
     <div className="create-playlist">
-      <label htmlFor="playlist">
-        Create New Playlist
+      <label htmlFor="create-playlist">
+        <div style={{ textAlign: "center", marginBottom: "0.2rem" }}>
+          Create New Playlist
+        </div>
         <input
           type="text"
-          id="playlist"
+          id="create-playlist"
           value={playlistName}
           onChange={(e) => {
             setPlaylistName(e.target.value);
@@ -47,6 +49,7 @@ export const CreatePlaylist = ({ playlists, updatePlaylist, videoId }) => {
         />
       </label>
       <button
+        style={{ marginTop: "0.2rem", marginBottom: "0.5rem" }}
         onClick={() => {
           createPlaylist(playlistName, updatePlaylist, videoId, modalDispatch);
           setPlaylistName("");
@@ -62,7 +65,6 @@ export const PlaylistsListing = () => {
   const { state: playlists, dispatch: updatePlaylist } = usePlaylistContext();
   return (
     <div className="playlists">
-      <h1>Playlists</h1>
       <CreatePlaylist playlists={playlists} updatePlaylist={updatePlaylist} />
       <VideosGroupGrid videosGroup={playlists} type="playlists" />
     </div>

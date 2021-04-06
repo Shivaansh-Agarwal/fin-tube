@@ -11,15 +11,19 @@ export const VideosGroupCard = ({ id, name, videos, type }) => {
   const { dispatch: modalDispatch } = useModalContext();
   const endpoint =
     type === "playlists" ? `/playlists/${id}` : `/categories/${id}`;
+  let thumbnailImgSrc = "https://picsum.photos/200/160/";
+  if (videos && videos.length !== 0) {
+    thumbnailImgSrc = `http://img.youtube.com/vi/${videos[0]}/hqdefault.jpg`;
+  }
   return (
     <div className="videos-group__card">
       <Link to={endpoint}>
         <div className="videos-group__card__thumbnail">
-          <img src={`https://picsum.photos/200/160/`} alt="thumbnail" />
+          <img src={thumbnailImgSrc} alt="thumbnail" />
           <div className="videos-group__card--info">
             <div>{videos ? videos.length : 0}</div>
             <div>
-              <span class="material-icons">playlist_play</span>
+              <span className="material-icons">playlist_play</span>
             </div>
           </div>
         </div>

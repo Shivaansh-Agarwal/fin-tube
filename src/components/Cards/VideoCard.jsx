@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { usePlaylistContext } from "../../contexts/playlist-context";
+import Axios from "axios";
 import "./cards.css";
 
 export const VideoCard = ({
@@ -9,9 +11,19 @@ export const VideoCard = ({
   creator,
   playlists,
 }) => {
+  const {
+    state: playlistState,
+    dispatch: playlistDispatch,
+  } = usePlaylistContext();
+  const history = useHistory();
   const { id: creatorId, name: creatorName, imgSrc: creatorImgSrc } = creator;
   return (
-    <Link className="videocard" to={`/watch/${id}`}>
+    <div
+      className="videocard"
+      onClick={() => {
+        history.push(`/watch/${id}`);
+      }}
+    >
       <div className="vediocard__thumbnail">
         <img
           src={`http://img.youtube.com/vi/${id}/hqdefault.jpg`}
@@ -29,9 +41,38 @@ export const VideoCard = ({
           <span className="videocard--creatorname">{creatorName}</span>
         </div>
         <div className="vedioCard__details__right">
-          <span className="material-icons">more_vert</span>
+          <button
+            title="Add to Watchlater"
+            onClick={(e) => {
+              const playlist = playlistState.find(
+                (list) => list.id === "f4558066-968c-11eb-a8b3-0242ac130003"
+              );
+              addToWatchLaterList(playlist, id, playlistDispatch);
+              e.stopPropagation();
+            }}
+          >
+            <span className="material-icons">playlist_add</span>
+          </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
+
+async function addToWatchLaterList(playlist, videoId, playlistDispatch) {
+  try {
+    const updatedPlaylist = {
+      ...playlist,
+      videos: [...playlist.videos, videoId],
+    };
+    const { data, status } = await Axios.put(
+      `/api/playlists/${playlist.id}`,
+      updatedPlaylist
+    );
+    if (status === 200) {
+      playlistDispatch({ type: "UPDATE", payload: data.playlist });
+    }
+  } catch (e) {
+    console.error("Error while adding video to Watch Later List", e);
+  }
+}

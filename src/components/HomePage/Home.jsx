@@ -7,7 +7,6 @@ export const Home = () => {
   const videoList = useVideoContext();
   return (
     <div className="home">
-      <h1>Home</h1>
       <VideoGrid videoList={videoList} />
     </div>
   );

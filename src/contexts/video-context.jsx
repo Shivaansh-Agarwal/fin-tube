@@ -6,7 +6,7 @@ export const VideoProvider = ({ children }) => {
   function reducer(state, action) {
     console.log(state);
     switch (action.type) {
-      case "UPDATE":
+      case "SET_DATA":
         return [...action.payload];
       default:
         throw new Error("something fishy...");
@@ -16,7 +16,7 @@ export const VideoProvider = ({ children }) => {
   useEffect(() => {
     fetch("/api/videos")
       .then((response) => response.json())
-      .then((json) => dispatch({ type: "UPDATE", payload: json.videoList }));
+      .then((json) => dispatch({ type: "SET_DATA", payload: json.videoList }));
   }, []);
   return (
     <VideoContext.Provider value={state}>{children}</VideoContext.Provider>

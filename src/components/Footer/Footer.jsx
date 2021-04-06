@@ -1,33 +1,50 @@
 import React from "react";
 import "./footer.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer--section">
-        <Link className="footer--link" to="/">
+        <NavLink
+          className="footer--link"
+          activeClassName="footer--link-active"
+          exact
+          to="/"
+        >
           <span className="material-icons footer--icon">home</span>
           <span>Home</span>
-        </Link>
+        </NavLink>
       </div>
       <div className="footer--section">
-        <Link className="footer--link" to="/playlists">
+        <NavLink
+          className="footer--link"
+          activeClassName="footer--link-active"
+          to="/playlists"
+        >
           <span className="material-icons footer--icon">playlist_play</span>
           <span>My Playlists</span>
-        </Link>
+        </NavLink>
       </div>
       <div className="footer--section">
-        <Link className="footer--link" to="/categories">
+        <NavLink
+          className="footer--link"
+          activeClassName="footer--link-active"
+          to="/categories"
+        >
           <span className="material-icons footer--icon">category</span>
           <span>Categories</span>
-        </Link>
+        </NavLink>
       </div>
       <div className="footer--section">
-        <Link className="footer--link" to="/watchlater">
+        <NavLink
+          className="footer--link"
+          activeClassName="footer--link-active"
+          to="/watchlater"
+        >
           <span className="material-icons footer--icon">watch_later</span>
           <span>Watch Later</span>
-        </Link>
+        </NavLink>
       </div>
     </footer>
   );

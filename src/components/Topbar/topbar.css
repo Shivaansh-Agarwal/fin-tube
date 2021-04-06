@@ -19,6 +19,7 @@
   height: var(--topbar-height);
   color: var(--topbar-bgcolor);
   transition: top 0.3s;
+  z-index: 5;
 }
 .topbar__main,
 .topbar__search {

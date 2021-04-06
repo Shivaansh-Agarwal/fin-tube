@@ -70,6 +70,15 @@
 .vedioCard__details__right {
   position: absolute;
   right: 0;
+  bottom: 0;
+}
+.vedioCard__details__right button {
+  border: 0px solid transparent;
+  border-radius: 100px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*--- VideosGroupCard ---*/

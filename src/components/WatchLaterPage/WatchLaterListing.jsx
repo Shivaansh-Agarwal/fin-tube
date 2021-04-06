@@ -1,8 +1,7 @@
 import React from "react";
 import "./watchlater.css";
-import { VideoGrid } from "../Grids/Grids.jsx";
+import { VideosList } from "../Lists";
 import { useVideoContext } from "../../contexts/video-context.jsx";
-// import { useWatchLaterContext } from "../../contexts/watchLater-context.jsx";
 import { usePlaylistContext } from "../../contexts/playlist-context";
 
 export const WatchLaterListing = () => {
@@ -23,7 +22,7 @@ export const WatchLaterListing = () => {
         <p>No videos added to Watch Later...</p>
       )}
       {watchLaterVideosList.length !== 0 && (
-        <VideoGrid videoList={watchLaterFinalList} />
+        <VideosList videosList={watchLaterFinalList} />
       )}
     </div>
   );

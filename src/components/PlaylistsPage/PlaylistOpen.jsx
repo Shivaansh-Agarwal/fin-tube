@@ -1,7 +1,7 @@
 import React from "react";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { usePlaylistContext } from "../../contexts/playlist-context.jsx";
-import { VideoGrid } from "../Grids/Grids.jsx";
+import { VideosList } from "../Lists";
 
 function getRequiredPlaylist(playlists, reqPlaylistId) {
   return playlists.filter(({ id }) => id === reqPlaylistId)[0];
@@ -25,7 +25,7 @@ export const PlaylistOpen = ({ match }) => {
   return (
     <div className="playlists">
       <h1>{reqPlaylist.name}</h1>
-      <VideoGrid videoList={playlistVideos} />
+      <VideosList videosList={playlistVideos} />
     </div>
   );
 };

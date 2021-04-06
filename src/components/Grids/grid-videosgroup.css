@@ -1,0 +1,44 @@
+.grid__videos__group {
+  max-width: 1880px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.grid__items--card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Screen larger than 380px? 2 columns */
+@media (min-width: 450px) {
+  .grid__videos__group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Screen larger than 760px? 3 columns */
+@media (min-width: 760px) {
+  .grid__videos__group {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Screen larger than 1160px? 4 columns */
+@media (min-width: 1100px) {
+  .grid__videos__group {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1300px) {
+  .grid__videos__group {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Screen larger than 1800px? 8 columns */
+@media (min-width: 1550px) {
+  .grid__videos__group {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}

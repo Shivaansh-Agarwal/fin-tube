@@ -2,7 +2,6 @@ import { createServer } from "miragejs";
 import videoData from "./data/videos-data.js";
 import playlistData from "./data/playlists-data.js";
 import categoriesData from "./data/categories-data.js";
-import watchLaterData from "./data/watchlater-data.js";
 
 export function setupMockServer() {
   createServer({
@@ -37,14 +36,6 @@ export function setupMockServer() {
       this.get("/categories", (schema, request) => {
         return categoriesData;
       });
-
-      // this.get("/watchlater", (schema, request) => {
-      //   return watchLaterData.watchLaterList;
-      // });
-      // this.patch("/watchlater", (schema, request) => {
-      //   let body = JSON.parse(request.requestBody);
-      //   return { videoId: body };
-      // });
     },
   });
 }

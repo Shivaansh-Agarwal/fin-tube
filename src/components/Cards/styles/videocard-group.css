@@ -1,0 +1,79 @@
+:root {
+  --videoscard-group-width: 20rem;
+}
+.videos-group__card {
+  border: 1px solid gray;
+  max-width: var(--videoscard-group-width);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.2rem;
+}
+.videos-group__card a {
+  text-decoration: none;
+}
+.videos-group__card__thumbnail {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videos-group__card__thumbnail img {
+  width: 100%;
+  min-height: 100%;
+  margin: -10% 0%;
+  filter: brightness(var(--thumbnail-filter-brightness));
+}
+.videos-group__card--info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.videos-group__card__details {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.2rem;
+}
+.videos-group__card--name {
+  overflow: hidden;
+  height: 17px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.videos-group__card--videoCount {
+  font-size: 0.75rem;
+}
+.videos-group__card__buttons {
+  width: 100%;
+  padding-right: 0.2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.videos-group__card__buttons button {
+  border: 0px solid transparent;
+  opacity: 0.7;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

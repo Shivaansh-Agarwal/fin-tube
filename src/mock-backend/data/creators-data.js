@@ -48,6 +48,48 @@ const creatorData = {
       imgSrc:
         "https://yt3.ggpht.com/ytc/AAUvwniKLv8OUIav1NVgVBwJRec7HY55CWhONnFtwHSJDg=s88-c-k-c0x00ffffff-no-rj",
     },
+    {
+      id: "UC7eBNeDW1GQf2NJQ6G6gAxw",
+      name: "The Ramsey Show - Highlights",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwng1IxObu9zr54EZwgOiIdaqKz2W7_1fjJComLF_bQ=s88-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      id: "UCYLUA7FaYqZruSV32Cj19Hw",
+      name: "Helly",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwnhKYYMpOxvtliFuisoEHDnlHyDyL3DOK9MwpI9_2A=s88-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      id: "UCQHLxxBFrbfdrk1jF0moTpw",
+      name: "Love Babbar",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwniuiil3MsNvPltVwGbgyVArM0iMBtfTe00CcHNN=s88-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      id: "",
+      name: "TD Ameritrade",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwngnBDMzi_Wr_7PsvIy5URODlf4gVzj-dxQ-s4dPzA=s88-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      id: "UCBJycsmduvYEL83R_U4JriQ",
+      name: "Marques Brownlee",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwngW9TQgw7E7NqS3Qzd3Up3tjUzkpvMXPWAhYf3LaQ=s88-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      id: "UCvQECJukTDE2i6aCoMnS-Vg",
+      name: "Big Think",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwnhQtbqXRiJYKG55116p8H9rmytZ-bej8S2XGgKiMA=s88-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      id: "UCSPYNpQ2fHv9HJ-q6MIMaPw",
+      name: "The Financial Diet",
+      imgSrc:
+        "https://yt3.ggpht.com/ytc/AAUvwngp5sMGN5ZntThZexE1OX5ernmuKrF-2ogD-x8u4Q=s88-c-k-c0x00ffffff-no-rj",
+    },
   ],
 };
 export default creatorData;

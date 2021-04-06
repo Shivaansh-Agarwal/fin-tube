@@ -12,14 +12,14 @@
   /* grid-template-columns: repeat(auto-fit, repeat(2, 1fr)); */
 }
 
-/* Screen larger than 600px? 2 columns */
-@media (min-width: 600px) {
+/* Screen larger than 380px? 2 columns */
+@media (min-width: 380px) {
   .grid__items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* Screen larger than 900px? 3 columns */
-@media (min-width: 900px) {
+/* Screen larger than 760px? 3 columns */
+@media (min-width: 760px) {
   .grid__items {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -28,5 +28,11 @@
 @media (min-width: 1160px) {
   .grid__items {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Screen larger than 1400px? 5 columns */
+@media (min-width: 1400px) {
+  .grid__items {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

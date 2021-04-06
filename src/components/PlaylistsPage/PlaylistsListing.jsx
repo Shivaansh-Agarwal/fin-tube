@@ -3,7 +3,7 @@ import { usePlaylistContext } from "../../contexts/playlist-context";
 import { useModalContext } from "../../contexts/modal-context.jsx";
 import "./playlists.css";
 import { v4 as uuidv4 } from "uuid";
-import { VideosGroupGrid } from "../Grids/Grids.jsx";
+import { VideosGroupGrid } from "../Grids";
 import Axios from "axios";
 
 async function createPlaylist(
@@ -54,6 +54,7 @@ export const CreatePlaylist = ({ playlists, updatePlaylist, videoId }) => {
           createPlaylist(playlistName, updatePlaylist, videoId, modalDispatch);
           setPlaylistName("");
         }}
+        disabled={playlistName === "" ? true : false}
       >
         Create PlayList
       </button>
@@ -63,10 +64,16 @@ export const CreatePlaylist = ({ playlists, updatePlaylist, videoId }) => {
 
 export const PlaylistsListing = () => {
   const { state: playlists, dispatch: updatePlaylist } = usePlaylistContext();
+  const playlistsExceptWatchLater = playlists.filter(
+    (playlist) => playlist.id !== "f4558066-968c-11eb-a8b3-0242ac130003"
+  );
   return (
     <div className="playlists">
       <CreatePlaylist playlists={playlists} updatePlaylist={updatePlaylist} />
-      <VideosGroupGrid videosGroup={playlists} type="playlists" />
+      <VideosGroupGrid
+        videosGroup={playlistsExceptWatchLater}
+        type="playlists"
+      />
     </div>
   );
 };

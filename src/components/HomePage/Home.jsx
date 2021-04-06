@@ -1,5 +1,5 @@
 import React from "react";
-import { VideoGrid } from "../Grids/Grids.jsx";
+import { VideoGrid } from "../Grids";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import "./home.css";
 

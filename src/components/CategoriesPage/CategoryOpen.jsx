@@ -1,7 +1,7 @@
 import React from "react";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { useCategoriesContext } from "../../contexts/categories-context.jsx";
-import { VideoGrid } from "../Grids/Grids.jsx";
+import { VideoGrid } from "../Grids";
 
 function getRequiredCategory(categories, reqCategoryId) {
   return categories.filter(({ id }) => id === reqCategoryId)[0];

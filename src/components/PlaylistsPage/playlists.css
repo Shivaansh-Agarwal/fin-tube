@@ -1,5 +1,7 @@
 .playlists {
+  width: 100%;
 }
+
 .createplaylist--wrapper {
   display: flex;
   justify-content: center;

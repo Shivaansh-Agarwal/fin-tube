@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ModalDeletePlaylist } from "../Modal/Modal.jsx";
 import { useModalContext } from "../../contexts/modal-context.jsx";
-import "./cards.css";
+import "./styles/videocard-group.css";
 
 /**
  * This Component is used to display a collection of videos: playlist, categories.
  */
-export const VideosGroupCard = ({ id, name, videos, type }) => {
+export const VideosCardGroup = ({ id, name, videos, type }) => {
   const { dispatch: modalDispatch } = useModalContext();
   const endpoint =
     type === "playlists" ? `/playlists/${id}` : `/categories/${id}`;

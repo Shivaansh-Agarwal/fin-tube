@@ -1,14 +1,15 @@
 import React from "react";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { useCategoriesContext } from "../../contexts/categories-context.jsx";
-import { VideoGrid } from "../Grids";
+import { GridVideosPreview } from "../Grids";
+import { useParams } from "react-router-dom";
 
 function getRequiredCategory(categories, reqCategoryId) {
   return categories.filter(({ id }) => id === reqCategoryId)[0];
 }
 
-export const CategoryOpen = ({ match }) => {
-  const categoryId = match.params.id;
+export const CategoryOpen = () => {
+  const { id: categoryId } = useParams();
   const videoList = useVideoContext();
   const { state: categories } = useCategoriesContext();
   const reqCategory = getRequiredCategory(categories, categoryId);
@@ -25,7 +26,7 @@ export const CategoryOpen = ({ match }) => {
   return (
     <div className="playlists">
       <h1>{reqCategory.name}</h1>
-      <VideoGrid videoList={categoryVideos} />
+      <GridVideosPreview videoList={categoryVideos} />
     </div>
   );
 };

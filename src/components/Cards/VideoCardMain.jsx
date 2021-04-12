@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { usePlaylistContext } from "../../contexts/playlist-context";
 import Axios from "axios";
 import "./styles/videocard-main.css";
@@ -9,13 +9,15 @@ export const VideoCardMain = ({ id, name: videoName, categoryId, creator }) => {
     state: playlistState,
     dispatch: playlistDispatch,
   } = usePlaylistContext();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [showMoreOptions, setShowMoreOptions] = useState(false);
   const { id: creatorId, name: creatorName, imgSrc: creatorImgSrc } = creator;
   return (
     <div
       className="videocard"
-      onClick={() => openVideoPage(history, id)}
+      onClick={() =>
+        openVideoPage(navigate, id, videoName, categoryId, creator)
+      }
       data-categoryid={categoryId}
     >
       <CardThumbnailImg id={id} />
@@ -124,6 +126,8 @@ function CardDetails({
   );
 }
 
-function openVideoPage(history, id) {
-  history.push(`/watch/${id}`);
+function openVideoPage(navigate, id, videoName, categoryId, creator) {
+  navigate(`/watch/${id}`, {
+    state: { id, videoName, categoryId, creator },
+  });
 }

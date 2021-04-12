@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./app.css";
 import {
   Topbar,
@@ -18,15 +18,15 @@ function App() {
     <div className="App">
       <Topbar />
       <main>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/watch/:id" component={Watch} />
-          <Route path="/playlists" exact component={PlaylistsListing} />
-          <Route path="/playlists/:id" component={PlaylistOpen} />
-          <Route path="/categories" exact component={CategoriesListing} />
-          <Route path="/categories/:id" component={CategoryOpen} />
-          <Route path="/watchlater" component={WatchLaterListing} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/watch/:id" element={<Watch />} />
+          <Route path="/playlists" element={<PlaylistsListing />} />
+          <Route path="/playlists/:id" element={<PlaylistOpen />} />
+          <Route path="/categories" element={<CategoriesListing />} />
+          <Route path="/categories/:id" element={<CategoryOpen />} />
+          <Route path="/watchlater" element={<WatchLaterListing />} />
+        </Routes>
       </main>
       <Footer />
     </div>

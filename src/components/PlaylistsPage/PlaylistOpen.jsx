@@ -2,13 +2,14 @@ import React from "react";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { usePlaylistContext } from "../../contexts/playlist-context.jsx";
 import { VideosList } from "../Lists";
+import { useParams } from "react-router-dom";
 
 function getRequiredPlaylist(playlists, reqPlaylistId) {
   return playlists.filter(({ id }) => id === reqPlaylistId)[0];
 }
 
-export const PlaylistOpen = ({ match }) => {
-  const playlistId = match.params.id;
+export const PlaylistOpen = () => {
+  const { id: playlistId } = useParams();
   const videoList = useVideoContext();
   const { state: playlists } = usePlaylistContext();
   const reqPlaylist = getRequiredPlaylist(playlists, playlistId);
@@ -23,7 +24,7 @@ export const PlaylistOpen = ({ match }) => {
     }
   }
   return (
-    <div className="playlists">
+    <div className="playlists-open">
       <h1>{reqPlaylist.name}</h1>
       <VideosList videosList={playlistVideos} />
     </div>

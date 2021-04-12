@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ModalDeletePlaylist } from "../Modal/Modal.jsx";
 import { useModalContext } from "../../contexts/modal-context.jsx";
 import "./styles/videocard-group.css";
@@ -9,6 +9,7 @@ import "./styles/videocard-group.css";
  */
 export const VideosCardGroup = ({ id, name, videos, type }) => {
   const { dispatch: modalDispatch } = useModalContext();
+  const navigate = useNavigate();
   const endpoint =
     type === "playlists" ? `/playlists/${id}` : `/categories/${id}`;
   let thumbnailImgSrc = "https://picsum.photos/200/160/";
@@ -17,7 +18,11 @@ export const VideosCardGroup = ({ id, name, videos, type }) => {
   }
   return (
     <div className="videos-group__card">
-      <Link to={endpoint}>
+      <div
+        onClick={() => {
+          navigate(endpoint);
+        }}
+      >
         <div className="videos-group__card__thumbnail">
           <img src={thumbnailImgSrc} alt="thumbnail" />
           <div className="videos-group__card--info">
@@ -33,7 +38,7 @@ export const VideosCardGroup = ({ id, name, videos, type }) => {
             <span>{videos ? videos.length : 0} Videos</span>
           </div>
         </div>
-      </Link>
+      </div>
       <div className="videos-group__card__buttons">
         {type === "playlists" && (
           <button

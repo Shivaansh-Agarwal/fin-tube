@@ -1,8 +1,8 @@
 import React from "react";
 import { VideosCardGroup } from "../Cards";
-import "./grid-videosgroup.css";
+import "./styles/gridVideosGroup.css";
 
-export const VideosGroupGrid = ({ videosGroup, type }) => {
+export const GridVideosGroup = ({ videosGroup, type }) => {
   return (
     <div className="grid__videos__group">
       {videosGroup &&

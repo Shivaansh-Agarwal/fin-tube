@@ -5,8 +5,6 @@ export const Iframe = ({ id }) => {
   return (
     <div className="iframe-container">
       <iframe
-        width="560"
-        height="315"
         src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`}
         title="YouTube video player"
         frameBorder="0"
@@ -16,3 +14,6 @@ export const Iframe = ({ id }) => {
     </div>
   );
 };
+
+/**width="560"
+        height="315" */

@@ -9,7 +9,7 @@ export const Footer = () => {
         <NavLink
           className="footer--link"
           activeClassName="footer--link-active"
-          exact
+          end
           to="/"
         >
           <span className="material-icons footer--icon">home</span>

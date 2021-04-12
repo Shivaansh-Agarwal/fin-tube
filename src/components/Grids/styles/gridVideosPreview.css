@@ -12,8 +12,8 @@
   /* grid-template-columns: repeat(auto-fit, repeat(2, 1fr)); */
 }
 
-/* Screen larger than 380px? 2 columns */
-@media (min-width: 380px) {
+/* Screen larger than 550px? 2 columns */
+@media (min-width: 550px) {
   .grid__items {
     grid-template-columns: repeat(2, 1fr);
   }

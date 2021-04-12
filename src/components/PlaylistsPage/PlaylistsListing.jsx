@@ -3,7 +3,7 @@ import { usePlaylistContext } from "../../contexts/playlist-context";
 import { useModalContext } from "../../contexts/modal-context.jsx";
 import "./playlists.css";
 import { v4 as uuidv4 } from "uuid";
-import { VideosGroupGrid } from "../Grids";
+import { GridVideosGroup } from "../Grids";
 import Axios from "axios";
 
 async function createPlaylist(
@@ -70,7 +70,7 @@ export const PlaylistsListing = () => {
   return (
     <div className="playlists">
       <CreatePlaylist playlists={playlists} updatePlaylist={updatePlaylist} />
-      <VideosGroupGrid
+      <GridVideosGroup
         videosGroup={playlistsExceptWatchLater}
         type="playlists"
       />

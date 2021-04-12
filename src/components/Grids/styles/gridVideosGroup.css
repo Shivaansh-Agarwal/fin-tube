@@ -17,25 +17,24 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* Screen larger than 760px? 3 columns */
+/* Screen larger than 760px? 4 columns */
 @media (min-width: 760px) {
   .grid__videos__group {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-/* Screen larger than 1160px? 4 columns */
-@media (min-width: 1100px) {
+/* Screen larger than 1160px? 5 columns */
+@media (min-width: 1160px) {
   .grid__videos__group {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
+/* Screen larger than 1300px? 6 columns */
 @media (min-width: 1300px) {
   .grid__videos__group {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-
 /* Screen larger than 1800px? 8 columns */
 @media (min-width: 1550px) {
   .grid__videos__group {

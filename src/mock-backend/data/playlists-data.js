@@ -7,12 +7,12 @@ const playlistData = {
     },
     {
       id: "2weqdadmalkd",
-      name: "my stocks",
+      name: "My stocks",
       videos: ["3UF0ymVdYLA"],
     },
     {
       id: "adtnaefjnad",
-      name: "my mutual funds",
+      name: "My mutual funds",
       videos: ["3PGL5pkqwVM", "l7ErNZmKzxY", "U1w80AsDwSE"],
     },
   ],

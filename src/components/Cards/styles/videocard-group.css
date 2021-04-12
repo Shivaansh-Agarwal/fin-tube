@@ -1,14 +1,18 @@
 :root {
   --videoscard-group-width: 20rem;
+  --videoscard-group-bgcolor: hsla(0, 0%, 53.3%, 0.2);
 }
 .videos-group__card {
-  border: 1px solid gray;
+  border: 1px solid transparent;
   max-width: var(--videoscard-group-width);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   padding-bottom: 0.2rem;
+  border-radius: 5px;
+  background-color: var(--videoscard-group-bgcolor);
+  cursor: pointer;
 }
 .videos-group__card a {
   text-decoration: none;
@@ -21,6 +25,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .videos-group__card__thumbnail img {
   width: 100%;
@@ -46,7 +52,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  padding: 0.2rem;
+  padding: 0.2rem 0.4rem;
 }
 .videos-group__card--name {
   overflow: hidden;
@@ -76,4 +82,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.videos-group__card__buttons button:hover {
+  opacity: 1;
 }

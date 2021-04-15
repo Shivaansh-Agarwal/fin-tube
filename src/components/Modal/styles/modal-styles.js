@@ -1,0 +1,75 @@
+export const addToPlaylistModalStyles = {
+  content: {
+    position: "absolute",
+    width: "15rem",
+    margin: "auto",
+    top: "300px",
+    bottom: "300px",
+    border: "1px solid #ccc",
+    background: "#fff",
+    overflow: "auto",
+    WebkitOverflowScrolling: "touch",
+    borderRadius: "4px",
+    outline: "none",
+    padding: "1.2rem",
+  },
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "hsla(0,0%,6.7%,0.8)",
+    zIndex: 1000,
+  },
+};
+
+export const createPlaylistModalStyles = {
+  content: {
+    position: "absolute",
+    maxHeight: "10rem",
+    width: "12rem",
+    margin: "auto",
+    border: "1px solid #ccc",
+    background: "#fff",
+    overflow: "auto",
+    WebkitOverflowScrolling: "touch",
+    borderRadius: "4px",
+    outline: "none",
+    padding: "1.2rem",
+  },
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "hsla(0,0%,6.7%,0.8)",
+    zIndex: 1000,
+  },
+};
+
+export const deletePlaylistModalStyles = {
+  content: {
+    position: "absolute",
+    maxHeight: "10rem",
+    width: "12rem",
+    margin: "auto",
+    border: "1px solid #ccc",
+    background: "#fff",
+    overflow: "auto",
+    WebkitOverflowScrolling: "touch",
+    borderRadius: "4px",
+    outline: "none",
+    padding: "1.2rem",
+  },
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "hsla(0,0%,6.7%,0.8)",
+    zIndex: 1000,
+  },
+};

@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "./app.css";
+import Modal from "react-modal";
+import "./styles/app.css";
 import { Topbar, Footer } from "./components";
 import {
   Home,
@@ -11,6 +12,8 @@ import {
   CategoryOpen,
   WatchLaterListing,
 } from "./pages";
+
+Modal.setAppElement("#root");
 
 function App() {
   return (

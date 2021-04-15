@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ModalDeletePlaylist } from "../Modal/Modal.jsx";
-import { useModalContext } from "../../contexts/modal-context.jsx";
+import { ModalDeletePlaylist } from "../Modal";
 import "./styles/cardVideosGroup.css";
 
 /**
  * This Component is used to display a collection of videos: playlist, categories.
  */
 export const CardVideosGroup = ({ id, name, videos, type }) => {
-  const { dispatch: modalDispatch } = useModalContext();
+  const [isModalOpenDeletePlaylist, setIsModalOpenDeletePlaylist] = useState(
+    false
+  );
   const navigate = useNavigate();
   const endpoint =
     type === "playlists" ? `/playlists/${id}` : `/categories/${id}`;
@@ -43,18 +44,20 @@ export const CardVideosGroup = ({ id, name, videos, type }) => {
         {type === "playlists" && (
           <button
             onClick={(e) => {
-              modalDispatch({
-                type: "DELETE_PLAYLIST_MODAL_VISIBILITY",
-                payload: true,
-              });
-              e.stopPropagation();
+              setIsModalOpenDeletePlaylist(true);
             }}
           >
             <span className="material-icons">delete</span>
           </button>
         )}
       </div>
-      <ModalDeletePlaylist playlistId={id} />
+      <ModalDeletePlaylist
+        playlistId={id}
+        modalVisibilityState={[
+          isModalOpenDeletePlaylist,
+          setIsModalOpenDeletePlaylist,
+        ]}
+      />
     </div>
   );
 };

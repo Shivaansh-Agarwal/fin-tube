@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { useModalContext } from "../../contexts/modal-context.jsx";
 import { usePlaylistContext } from "../../contexts/playlist-context.jsx";
-import { CreatePlaylist } from "../PlaylistsPage/PlaylistsListing.jsx";
+import { CreatePlaylist } from "../../pages/Playlists/PlaylistsListing.jsx";
 import Axios from "axios";
 import "./modal.css";
 

@@ -2,12 +2,15 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "./watch.css";
 import ReactPlayer from "react-player";
-import { ModalAddToPlaylist, ModalCreatePlaylist } from "../Modal/Modal.jsx";
+import {
+  ModalAddToPlaylist,
+  ModalCreatePlaylist,
+} from "../../components/Modal/Modal.jsx";
 import { useModalContext } from "../../contexts/modal-context.jsx";
 
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { useCategoriesContext } from "../../contexts/categories-context.jsx";
-import { GridVideosRecommendations } from "../Grids";
+import { GridVideosRecommendations } from "../../components/Grids";
 
 export const Watch = () => {
   const { state } = useLocation();

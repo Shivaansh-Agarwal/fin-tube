@@ -3,7 +3,7 @@ import { usePlaylistContext } from "../../contexts/playlist-context";
 import { useModalContext } from "../../contexts/modal-context.jsx";
 import "./playlists.css";
 import { v4 as uuidv4 } from "uuid";
-import { GridVideosGroup } from "../Grids";
+import { GridVideosGroup } from "../../components/Grids";
 import Axios from "axios";
 
 async function createPlaylist(

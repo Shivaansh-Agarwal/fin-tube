@@ -2,9 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { usePlaylistContext } from "../../contexts/playlist-context";
 import Axios from "axios";
-import "./styles/videocard-list.css";
+import "./styles/cardVideoList.css";
 
-export const VideoCardList = ({ id, name: videoName, categoryId, creator }) => {
+export const CardVideoList = ({ id, name: videoName, categoryId, creator }) => {
   const {
     state: playlistState,
     dispatch: playlistDispatch,

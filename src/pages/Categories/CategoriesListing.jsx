@@ -1,6 +1,6 @@
 import React from "react";
 import { useCategoriesContext } from "../../contexts/categories-context.jsx";
-import { GridVideosGroup } from "../Grids";
+import { GridVideosGroup } from "../../components/Grids";
 import "./categories.css";
 
 export const CategoriesListing = () => {

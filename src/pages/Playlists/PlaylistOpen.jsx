@@ -1,7 +1,7 @@
 import React from "react";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { usePlaylistContext } from "../../contexts/playlist-context.jsx";
-import { VideosList } from "../Lists";
+import { VideosList } from "../../components/Lists";
 import { useParams } from "react-router-dom";
 
 function getRequiredPlaylist(playlists, reqPlaylistId) {

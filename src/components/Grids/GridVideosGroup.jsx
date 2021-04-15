@@ -1,5 +1,5 @@
 import React from "react";
-import { VideosCardGroup } from "../Cards";
+import { CardVideosGroup } from "../Cards";
 import "./styles/gridVideosGroup.css";
 
 export const GridVideosGroup = ({ videosGroup, type }) => {
@@ -10,7 +10,7 @@ export const GridVideosGroup = ({ videosGroup, type }) => {
         videosGroup.map(({ id, name, videos }) => {
           return (
             <div key={id} className="grid__items--card-wrapper">
-              <VideosCardGroup
+              <CardVideosGroup
                 id={id}
                 name={name}
                 videos={videos}

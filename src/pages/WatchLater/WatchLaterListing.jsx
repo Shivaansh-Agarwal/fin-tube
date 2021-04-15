@@ -1,6 +1,6 @@
 import React from "react";
 import "./watchlater.css";
-import { VideosList } from "../Lists";
+import { VideosList } from "../../components/Lists";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { usePlaylistContext } from "../../contexts/playlist-context";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { VideoCardList } from "../Cards";
+import { CardVideoList } from "../Cards";
 import "./lists.css";
 
 export const VideosList = ({ videosList }) => {
@@ -9,7 +9,7 @@ export const VideosList = ({ videosList }) => {
         videosList.map(({ id, name, categoryId, creator, playlists }) => {
           return (
             <div key={id} className="videoslist--card-wrapper">
-              <VideoCardList
+              <CardVideoList
                 id={id}
                 name={name}
                 categoryId={categoryId}

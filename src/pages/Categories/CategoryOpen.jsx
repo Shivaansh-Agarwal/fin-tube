@@ -1,7 +1,7 @@
 import React from "react";
 import { useVideoContext } from "../../contexts/video-context.jsx";
 import { useCategoriesContext } from "../../contexts/categories-context.jsx";
-import { GridVideosPreview } from "../Grids";
+import { GridVideosPreview } from "../../components/Grids";
 import { useParams } from "react-router-dom";
 
 function getRequiredCategory(categories, reqCategoryId) {

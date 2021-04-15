@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VideoCardMain } from "../Cards";
+import { CardVideoMain } from "../Cards";
 import "./styles/gridVideosPreview.css";
 
 export const GridVideosPreview = ({ videoList }) => {
@@ -9,7 +9,7 @@ export const GridVideosPreview = ({ videoList }) => {
         videoList.map(({ id, name, categoryId, creator, playlists }) => {
           return (
             <div key={id} className="grid__items--card-wrapper">
-              <VideoCardMain
+              <CardVideoMain
                 id={id}
                 name={name}
                 categoryId={categoryId}

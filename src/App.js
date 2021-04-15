@@ -1,9 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./app.css";
+import { Topbar, Footer } from "./components";
 import {
-  Topbar,
-  Footer,
   Home,
   Watch,
   PlaylistsListing,
@@ -11,7 +10,7 @@ import {
   CategoriesListing,
   CategoryOpen,
   WatchLaterListing,
-} from "./components";
+} from "./pages";
 
 function App() {
   return (

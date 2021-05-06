@@ -1,0 +1,27 @@
+.playlists {
+  width: 100%;
+}
+
+.createplaylist--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playlist-grid-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/*--- Create Playlist ---*/
+.create-playlist {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlists-open {
+  width: 100%;
+}

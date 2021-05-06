@@ -1,0 +1,196 @@
+.watch {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.watch__video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 5%;
+  overflow: hidden;
+}
+.player__wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 3rem;
+  left: 0rem;
+  right: 0rem;
+  padding-top: 56.16%;
+}
+.react-player {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.watch__details {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 58%;
+}
+.watch__buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.watch__buttons button {
+  margin-right: 0.5rem;
+}
+
+.watch__recommendations {
+  position: static;
+}
+
+/* Screen larger than 882px */
+@media (min-width: 882px) {
+  .watch {
+    margin-right: 240px;
+  }
+  .watch__video {
+    padding-bottom: 0%;
+  }
+  .player__wrapper {
+    right: 250px;
+    padding-top: 40%;
+  }
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 14%;
+  }
+  .watch__recommendations {
+    position: fixed;
+    padding: 4px;
+    top: 3rem;
+    right: 0;
+    bottom: 3rem;
+    width: 240px;
+    overflow-y: scroll;
+  }
+}
+
+/* Screen larger than 920px */
+@media (min-width: 920px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 13%;
+  }
+}
+
+/* Screen larger than 980px */
+@media (min-width: 980px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 12%;
+  }
+}
+
+/* Screen larger than 1050px */
+@media (min-width: 1050px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 11.5%;
+  }
+}
+
+/* Screen larger than 1180px */
+@media (min-width: 1180px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 10%;
+  }
+}
+
+/* Screen larger than 1280px */
+@media (min-width: 1280px) {
+  .watch {
+    margin-right: 500px;
+    padding: 4px 8px;
+  }
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 20%;
+  }
+  .player__wrapper {
+    right: 510px;
+  }
+  .react-player {
+    width: 100%;
+  }
+  .watch__recommendations {
+    padding: 4px;
+    top: 3rem;
+    right: 0;
+    bottom: 3rem;
+    width: 500px;
+  }
+}
+
+/* Screen larger than 1350px */
+@media (min-width: 1350px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 18%;
+  }
+}
+
+/* Screen larger than 1450px */
+@media (min-width: 1450px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 17%;
+  }
+}
+
+/* Screen larger than 1550px */
+@media (min-width: 1450px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 16%;
+  }
+}
+
+/* Screen larger than 1650px */
+@media (min-width: 1650px) {
+  .watch__details {
+    padding-top: 40.8%;
+    padding-left: 15%;
+  }
+}
+
+/* Screen larger than 1700px */
+@media (min-width: 1700px) {
+  .watch {
+    margin-top: -1.3rem;
+    overflow: hidden;
+  }
+  .player__wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 0rem;
+    left: 14.5rem;
+    right: 250px;
+  }
+}
+
+/* Screen larger than 1881px */
+@media (min-width: 1881px) {
+  .watch {
+    overflow: hidden;
+  }
+  .watch__video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0%;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,34 @@
+.grid__recommendations {
+  max-width: 882px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* Screen larger than 550px? Grid-Right 2 column */
+@media (min-width: 550px) {
+  .grid__recommendations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 768px? Grid-Right 3 columns */
+@media (min-width: 768px) {
+  .grid__recommendations {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Screen larger than 1280px? Grid-Right 1 column */
+@media (min-width: 882px) {
+  .grid__recommendations {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Screen larger than 1280px? Grid-Right 2 columns */
+@media (min-width: 1280px) {
+  .grid__recommendations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

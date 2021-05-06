@@ -1,0 +1,114 @@
+:root {
+  --videocard-border-bottom-color: hsla(0, 0%, 53.3%, 0.4);
+  --videocard-padding-bottom: 10px;
+  --thumbnail-filter-brightness: 90%;
+  --videocard-btn-width: 40px;
+  --videocard-btn-height: 40px;
+  --videocard-btn-padding: 8px;
+  --videocard-btn-opacity: 0.8;
+  --videocard-thumbnail-width: 200px;
+  --videocard-thumbnail-height: 112px;
+  --videocard-creator-icon-width: 40px;
+  --videocard-creator-icon-height: 40px;
+  --videocard-creator-radius: 100px;
+}
+
+/* Screen smaller than 590px? */
+.videocard__list {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: var(--videocard-padding-bottom);
+  border-bottom: 1px solid var(--videocard-border-bottom-color);
+}
+.videocard__list__thumbnail {
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videocard__list__thumbnail img {
+  width: 100%;
+  min-height: 100%;
+  margin: -10% 0%;
+  filter: brightness(var(--thumbnail-filter-brightness));
+}
+.videocard__list--details__wrapper {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.videocard__list--creator-avatar {
+  width: var(--videocard-creator-icon-width);
+  height: var(--videocard-creator-icon-height);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+.videocard__list--creator-avatar img {
+  border-radius: var(--videocard-creator-radius);
+  width: 100%;
+  height: 100%;
+}
+.videocard__list--details {
+  width: 93%;
+  margin-left: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.videocard__list--detials-inner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.videocard__list--buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videocard__list--buttons button {
+  border: none;
+  background: transparent;
+  width: var(--videocard-btn-width);
+  height: var(--videocard-btn-height);
+  padding: var(--videocard-btn-padding);
+  opacity: var(--videocard-btn-opacity);
+}
+
+/* Screen larger than 590px? */
+@media (min-width: 590px) {
+  .videocard__list {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .videocard__list__thumbnail {
+    width: var(--videocard-thumbnail-width);
+    height: var(--videocard-thumbnail-height);
+  }
+  .videocard__list--details__wrapper {
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .videocard__list--details {
+    width: 100%;
+  }
+  .videocard__list--buttons {
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
